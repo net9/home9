@@ -20,9 +20,9 @@ exports.getUser = function(query, callback) {
 
 exports.updateNet9 = function(net9_user_info, callback) {
   var uid = parseInt(net9_user_info['uid']);
-  var username = net9_user_info['username'];
+  var username = net9_user_info['name'];
   delete net9_user_info['uid'];
-  delete net9_user_info['username'];
+  delete net9_user_info['name'];
   
   async.waterfall([
     function(callback) {

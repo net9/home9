@@ -7,7 +7,6 @@ var async = require('async');
 exports.displayUser = function displayUser(req, res) {
   var username = req.params.name;
   var user;
-  
   async.waterfall([
     function(callback) {
       //Fetch user infomation
@@ -73,7 +72,8 @@ exports.authCallback = function authCallback(req, res) {
       if (err) {
         return authError(err);
       }
-      var username = user.username;
+      var username = user.name;
+
       userman.updateNet9(user, function(err) {
         if (err) {
           return on_error(err);

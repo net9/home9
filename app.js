@@ -68,7 +68,7 @@ app.dynamicHelpers({
 });
 
 if (!module.parent) {
-  var port = 3000;
+  var port = 4000;
   if (process.argv.length >= 3) {
     port = parseInt(process.argv[2]);
   }
